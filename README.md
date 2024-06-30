@@ -4,7 +4,7 @@
 
 **FEATURES:**
 
-•	Real-time market data integration via WebSocket.
+-	Real-time market data integration via WebSocket.
 •	Dynamic calculation of opening range (high and low) for multiple instruments by creating two different DataFrame in single code.
 •	Automated breakout detection and trade signal generation.
 •	Scaling-in strategy with increasing position sizes on subsequent breakouts.
