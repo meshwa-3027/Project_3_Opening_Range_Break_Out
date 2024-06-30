@@ -148,6 +148,7 @@ def update_column_p_q_r_s_t(sht, row_no, alice, ltp, zone_high, zone_low, margin
         pass
     return current_BO_dir
 
+# Place Order
 def place_order(row_no, sht, alice, current_BO_dir, qty):
     exchange = sht.range("A"+str(row_no)).value 
     symbol = sht.range("B"+str(row_no)).value 
@@ -225,7 +226,7 @@ def repeat_breakout_counter_greater_than_1(row_no,sht,alice,qty,max_breakout_unt
 # While loop for continue data:
 counter = 0
 while True:
-    # try:
+    try:
         alice.subscribe(new_subscribe_list)
 
         # DataFrames
@@ -247,7 +248,7 @@ while True:
         if counter >0:
             if current_time > break_out_time:
                 for row_no in range (2,12):
-                    # try:
+                    try:
                         ltp = sht.range("G"+str(row_no)).value
                         zone_high = sht.range("M"+str(row_no)).value
                         zone_low = sht.range("N"+str(row_no)).value
@@ -255,8 +256,8 @@ while True:
                         zone_size = update_column_o(zone_high, zone_low, sht, row_no)
                         current_BO_dir = update_column_p_q_r_s_t(sht, row_no, alice, ltp, zone_high, zone_low, margin_available, max_breakout_until_qty_increment)
 
-    #                 except Exception as inner_e:
-    #                     pass
+                    except Exception as inner_e:
+                        pass
 
-    # except Exception as e:
-    #     print(f"An error occurred in main loop: {e}")
+    except Exception as e:
+        print(f"An error occurred in main loop: {e}")
