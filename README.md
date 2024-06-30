@@ -11,7 +11,18 @@ The Opening Range Breakout (ORB) Trading System is an automated trading solution
 * Scaling-in strategy with increasing position sizes on subsequent breakouts.
 * Dynamic profit target setting based on breakout direction and count.
 * Automated order placement and management
-* Automated order placement and management
-* 
+* Intraday square-off mechanism.
+* Excel-based data visualization and management.
+* Risk management through predefined investment limits and leverage controls.
+
+## TECHNOLOGIES USED:
+*	Programming Language: Python
+*	Trading API: AliceBlue (pya3 library)
+* Excel Integration: xlwings library
+* Data Handling: pandas for data manipulation.
+* Real-time Communication: WebSocket for live market data
+* Data Storage: Excel for input/output and visualization
+* Date and Time Handling: datetime module
+* Debugging: pdb module
 
 
