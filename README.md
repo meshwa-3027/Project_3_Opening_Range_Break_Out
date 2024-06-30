@@ -14,3 +14,16 @@
 •	Excel-based data visualization and management.
 •	Risk management through predefined investment limits and leverage controls.
 
+
+**TECHNOLIGIES USED:**
+
+•	Programming Language: Python
+•	Trading API: AliceBlue (pya3 library)
+•	Excel Integration: xlwings library
+•	Data Handling: pandas for data manipulation.
+•	Real-time Communication: WebSocket for live market data
+•	Data Storage: Excel for input/output and visualization
+•	Date and Time Handling: datetime module
+•	Debugging: pdb module
+
+
